@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photography Tools</title>
+  <link rel="stylesheet" href="build/thirdparty/css/materialize.min.css">
+  <style type="text/css">
+    html, body {
+      background: #00a388;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+<div id="photography-tools-container">
+  <a id="test-close" style="cursor: pointer">Close</a>
+</div>
+<script type="text/javascript" src="build/thirdparty/js/react.min.js"></script>
+<script type="text/javascript" src="build/thirdparty/js/react-dom.min.js"></script>
+
+<script type="text/javascript">
+  const remote = require('electron').remote;
+
+  document.getElementById('test-close').addEventListener('click', () => {
+    remote.getCurrentWindow().close();
+  });
+</script>
+</body>
+</html>
